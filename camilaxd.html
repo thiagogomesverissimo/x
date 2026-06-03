@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Bolinha</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="game" width="600" height="400"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+let x = 300;
+let y = 200;
+let raio = 20;
+
+let dx = 3;
+let dy = 3;
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") x -= 10;
+    if (event.key === "ArrowRight") x += 10;
+    if (event.key === "ArrowUp") y -= 10;
+    if (event.key === "ArrowDown") y += 10;
+});
+
+function desenharBolinha() {
+    ctx.beginPath();
+    ctx.arc(x, y, raio, 0, Math.PI * 2);
+    ctx.fillStyle = "blue";
+    ctx.fill();
+    ctx.closePath();
+}
+
+function atualizar() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    desenharBolinha();
+
+    x += dx;
+    y += dy;
+
+    if (x + raio > canvas.width || x - raio < 0) {
+        dx = -dx;
+    }
+
+    if (y + raio > canvas.height || y - raio < 0) {
+        dy = -dy;
+    }
+
+    requestAnimationFrame(atualizar);
+}
+
+atualizar();
+</script>
+
+</body>
+</html>
