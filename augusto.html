@@ -1,4 +1,187 @@
-Augusto
-<br>
-<a href="index.html">Voltar</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvendando a Inteligência Artificial</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --secondary: #a855f7;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid #2e1065;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #3b82f6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            background-color: var(--card-bg);
+            margin-bottom: 0.5rem;
+            padding: 1rem;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inteligência Artificial</h1>
+        <p>Uma introdução simples e direta sobre a tecnologia que está moldando o futuro da humanidade.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>O que é Inteligência Artificial (IA)?</h2>
+            <p>A Inteligência Artificial é um campo da ciência da computação dedicado a criar sistemas capazes de realizar tarefas que, normalmente, exigiriam inteligência humana. Isso inclui habilidades como aprender, raciocinar, resolver problemas, perceber o ambiente e entender linguagens naturais.</p>
+            <p>Em vez de seguir apenas instruções rígidas programadas linha por linha, os sistemas de IA modernos utilizam grandes volumes de dados para "aprender" a identificar padrões e tomar decisões por conta própria.</p>
+        </section>
+
+        <section>
+            <h2>Os Três Pilares Principais</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Dados (Big Data)</h3>
+                    <p>O combustível da IA. Para aprender a reconhecer um gato, por exemplo, o sistema precisa "ver" milhares de fotos de gatos primeiro.</p>
+                </div>
+                <div class="card">
+                    <h3>Algoritmos</h3>
+                    <p>As regras matemáticas e lógicas que processam os dados. Os mais famosos hoje são as Redes Neurais Artificiais.</p>
+                </div>
+                <div class="card">
+                    <h3>Processamento</h3>
+                    <p>Computadores potentes (como GPUs) que conseguem fazer bilhões de cálculos por segundo para treinar esses modelos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tipos de Inteligência Artificial</h2>
+            <p>A IA geralmente é dividida em duas grandes categorias com base na sua capacidade:</p>
+            <ul>
+                <li><strong>IA Estreita ou Fraca (ANI):</strong> Especializada em apenas uma tarefa. É a IA que temos hoje. Exemplos: corretores ortográficos, sistemas de recomendação da Netflix, reconhecimento facial e assistentes virtuais (como a Alexa).</li>
+                <li><strong>IA Geral ou Forte (AGI):</strong> Uma IA hipotética que teria a capacidade intelectual de um ser humano, conseguindo aprender qualquer tarefa cognitiva. Ainda não existe na realidade.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Onde ela está no seu cotidiano?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Redes Sociais</h3>
+                    <p>O feed do seu Instagram ou TikTok é organizado por uma IA que entende exatamente o que prende sua atenção.</p>
+                </div>
+                <div class="card">
+                    <h3>Saúde</h3>
+                    <p>Algoritmos ajudam médicos a detectar tumores em exames de imagem com precisão muitas vezes superior à humana.</p>
+                </div>
+                <div class="card">
+                    <h3>IA Generativa</h3>
+                    <p>Ferramentas capazes de criar textos, imagens, códigos e músicas do zero a partir de comandos simples.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Criado com foco em aprendizado sobre IA.</p>
+    </footer>
+
+</body>
+</html>

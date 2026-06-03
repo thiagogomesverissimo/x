@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conteúdo</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #container {
+      text-align: center;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #1e90ff;
+      color: white;
+    }
+
+    img {
+      display: none;
+      margin-top: 20px;
+      width: 80vw;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <h1>Conteúdo importante</h1>
+  <button onclick="mostrarGif()">Continuar</button>
+
+  <img 
+    id="gif"
+    src="https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif"
+    alt="Never Gonna Give You Up">
+</div>
+
+<script>
+  function mostrarGif() {
+    const gif = document.getElementById("gif");
+    gif.style.display = "block";
+  }
+</script>
+
+</body>
+</html>

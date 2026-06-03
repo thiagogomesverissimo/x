@@ -1,1 +1,225 @@
-<p> Olá </p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+    }
+
+    body.light {
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --text: #0f172a;
+      --accent: #2563eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      z-index: 1000;
+    }
+
+    header a {
+      color: var(--text);
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    header a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero span {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 15px 0;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      background: var(--accent);
+      color: white;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .skills div {
+      margin-bottom: 10px;
+    }
+
+    .bar {
+      height: 10px;
+      background: #334155;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--accent);
+      width: 0;
+      animation: fill 2s forwards;
+    }
+
+    @keyframes fill {
+      to { width: var(--w); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.7;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div><strong>MeuPortfólio</strong></div>
+  <nav>
+    <a href="#about">Sobre</a>
+    <a href="#projects">Projetos</a>
+    <a href="#skills">Skills</a>
+  </nav>
+  <button class="btn" onclick="toggleTheme()">Tema</button>
+</header>
+
+<section class="hero">
+  <h1>Olá, eu sou <span>Anderson</span></h1>
+  <p>Desenvolvedor Web | PHP | Drupal | JS</p>
+  <button class="btn" onclick="document.querySelector('#about').scrollIntoView()">Ver mais</button>
+</section>
+
+<section id="about">
+  <h2>Sobre mim</h2>
+  <div class="card">
+    Sou um desenvolvedor focado em backend e geoprocessamento, com interesse em sistemas web,
+    automação e análise de dados.
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projetos</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Sistema Drupal</h3>
+      <p>Desenvolvimento de módulo customizado com validações e integração API.</p>
+    </div>
+
+    <div class="card">
+      <h3>Geoprocessamento</h3>
+      <p>Mapeamento e análise espacial usando ferramentas GIS.</p>
+    </div>
+
+    <div class="card">
+      <h3>Automação Web</h3>
+      <p>Scripts para automação de tarefas administrativas.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills">
+
+    <div>
+      PHP
+      <div class="bar"><span style="--w: 90%"></span></div>
+    </div>
+
+    <div>
+      JavaScript
+      <div class="bar"><span style="--w: 80%"></span></div>
+    </div>
+
+    <div>
+      Drupal
+      <div class="bar"><span style="--w: 85%"></span></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 - Meu Portfolio
+</footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("light");
+  }
+</script>
+
+</body>
+</html>
