@@ -1,1 +1,138 @@
-Página do Giba em <b>Construção</b>.......
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação | Gilberto Vargas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: #ffffff;
+            max-width: 550px;
+            width: 90%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 5px solid #003366; /* Azul escuro tradicional/institucional */
+        }
+        
+        /* Container do Avatar modificado para suportar a badge absoluta abaixo */
+        .avatar-container {
+            position: relative;
+            width: 110px;
+            margin: 0 auto 30px auto;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background-color: #f0f4f8;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            font-size: 46px;
+            border: 2px solid #e2e8f0;
+        }
+        .level-badge {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #16a34a; /* Verde idêntico ao sistema */
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 0 0 8px 0;
+            color: #003366;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+        .info-block {
+            text-align: left;
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 3px solid #cbd5e1;
+        }
+        .info-block p {
+            margin: 8px 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .info-block strong {
+            color: #003366;
+        }
+        .btn-email {
+            display: inline-block;
+            background-color: #003366;
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+        }
+        .btn-email:hover {
+            background-color: #002244;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    
+    <!-- Novo Bloco de Avatar com Boneco Desenvolvedor e Tag Nível T3 -->
+    <div class="avatar-container">
+        <div class="avatar">👨‍💻</div>
+        <div class="level-badge">NÍVEL T3</div>
+    </div>
+    
+    <h1>Gilberto Vargas</h1>
+    <div class="tag">FFLCH - USP</div>
+    
+    <div class="info-block">
+        <p><strong>Setor:</strong> Serviço de Apoio Técnico (SAT)</p>
+        <p><strong>Atuação:</strong> Biblioteca Florestan Fernandes</p>
+        <p><strong>Core Stacks:</strong> Python (Streamlit), PHP (Laravel), APIs e Integração de Bots</p>
+        <p><strong>Interesses:</strong> Automação de processos, inovação tecnológica, modernização de infraestrutura e ecossistemas aplicados a bibliotecas universitárias.</p>
+    </div>
+    
+    <a href="mailto:gvargas@usp.br" class="btn-email">Entrar em Contato</a>
+</div>
+
+</body>
+</html>
